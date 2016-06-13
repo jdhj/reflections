@@ -7,6 +7,10 @@ We need to do this to enable git to process and track the directory as a git rep
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
 
+The staging area seems to be a somewhat abstract concept, the purpose of which is to prepare a potentially complicated commit before its execution.
+The alternative might be a risky and error prone multi-line statement applying all the commit at once.
+The staging area allows us to prepare the commit with more care, reviewing it carefully with the status command before final execution.
+
 How can you use the staging area to make sure you have one commit per logical
 change?
 
