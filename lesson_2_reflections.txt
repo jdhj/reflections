@@ -31,6 +31,8 @@ With branches used in this way, changes can be made independently to be integrat
 
 How do the diagrams help you visualize the branch structure?
 
+The diagrams help to visualize the branch structure, showing which commits can be reached from others and hence which contain those commits. This is important in terms of planning how to merge branches to include changes coherently back into the master branch as necessary. I can't help feeling that this would be a great place to have a nice graphic tool to visualize all of this. Or even to search for "lost" commits accidentally left unreachable in order to tidy them up/delete them etc. I wonder if such a tool exists?
+
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
