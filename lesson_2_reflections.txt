@@ -36,5 +36,12 @@ The diagrams help to visualize the branch structure, showing which commits can b
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+The diagram now show two alternate routes of commits that come together again at the merge commit.
+This highlights that commits in chronological order may no longer be direct parents of each other if some interleaving of commits took place on the branches that have merged.
+As for the merge itself? I have to admit that it scares me a little... what kind of "black-magic" is going on under the hood to merge these two branches and their unrelated changes into a consistent whole.
+No doubt this is a very "smart" algorithm, but I'd like to understand it better before I trust it with my code.
+It seems to me that there is potential for error here.
+Perhaps these doubts will be assuaged as the course continues and how this works is explained.
+
 What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
