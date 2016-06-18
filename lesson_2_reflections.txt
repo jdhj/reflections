@@ -45,3 +45,10 @@ Perhaps these doubts will be assuaged as the course continues and how this works
 
 What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
+
+Automatic merges certainly save a lot of time and effort over manual merges.
+This saving will only become more dramatic as the size of the files and the number of people working on them increase.
+On the other hand, there does seem to be potential for errors to be introduced, even with the conflict resolution safeguards. For example, what if two programmers both decided to use the the same identifier for different purposes. Or if one programmer add codes that uses a function whose behaviour has been altered by another.
+These might be merged without complaint by git leading to compilation errors, or worse, subtle and hard to detect bugs which might have been picked up in a manual merge.
+I think this highlights the need to check over and test merge results carefully to ensure that everything is working as it should.
+
