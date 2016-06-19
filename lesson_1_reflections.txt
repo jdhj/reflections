@@ -1,66 +1,98 @@
 How did viewing a diff between two versions of a file help you see the bug that
 was introduced?
 
-Using diff allows us to focus in on the parts of the code that have changed from a version that worked to a version containing a bug.
-The complete program source may be very large and the process would be tedious without such an ability to "zoom in" on the changes. 
-The fault is very likely to be found in one of these changes.
-This is a particularly good way to find changes that may not have been intentional such as typing errors, parts that we may have considered changing, but decided to revert for example.
-We may not even be aware that a change has occurred in a particular section until it is highlighted by a diff query.
+    Using diff allows us to focus in on the parts of the code that have changed 
+    from a version that worked to a version containing a bug. The complete program
+    source may be very large and the process would be tedious without such an
+    ability to "zoom in" on the changes. The fault is very likely to be found in
+    one of these changes. This is a particularly good way to find changes that 
+    may not have been intentional such as typing errors, parts that we may have
+    considered changing, but decided to revert for example. We may not even be
+    aware that a change has occurred in a particular section until it is 
+    highlighted by a diff query.
 
 How could having easy access to the entire history of a file make you a more
 efficient programmer in the long term?
 
-Having easy access to a history of all changes allows us to be more experimental in our coding. Radical changes can be tried, safe in the knowledge that we can always get back to where we were if things don't work out as hoped.
-What happens if I just delete this whole function... is it really still needed? Oops.. guess it was... we'll have that back again.
-We may write a useful piece of code that could be reused, but find that it isn't exactly what we need in the present case, no need to worry about archiving that somewhere because we know that it's safe in the version history for retrieval at a later date should we find an application for it, again liberating us from tedium and allowing us to focus on the task at hand.
-In the real world, we never have the luxury of being able to focus 100% on a particular task. 
-A thousand little diversions can interrupt the process of coding, a telephone call, an urgent report the boss needs...
-We often are forced to interrupt our thought process in the middle of something, later having to pick up the threads again... now what the hell was I doing here? Good version control allows us to step back as necessary to get going again from a point where we know what we're doing.
+    Having easy access to a history of all changes allows us to be more
+    experimental in our coding. Radical changes can be tried, safe in the
+    knowledge that we can always get back to where we were if things don't
+    work out as hoped. What happens if I just delete this whole function...
+    is it really still needed? Oops.. guess it was... we'll have that back
+    again. We may write a useful piece of code that could be reused, but find
+    that it isn't exactly what we need in the present case, no need to worry
+    about archiving that somewhere because we know that it's safe in the version
+    history for retrieval at a later date should we find an application for it,
+    again liberating us from tedium and allowing us to focus on the task at 
+    hand. In the real world, we never have the luxury of being able to focus
+    100% on a particular task. A thousand little diversions can interrupt the
+    process of coding, a telephone call, an urgent report the boss needs...
+    We often are forced to interrupt our thought process in the middle of
+    something, later having to pick up the threads again... now what the hell
+    was I doing here? Good version control allows us to step back as necessary
+    to get going again from a point where we know what we're doing.
 
 What do you think are the pros and cons of manually choosing when to create a
 commit, like you do in Git, vs having versions automatically saved, like Google
 docs does?
 
-Pros: Manual choosing allows us to select logical and meaningful points in the development flow at which to preserve the history. 
-This will make the history easier to follow and understand and will also reduce the computing resources required by saves made at less useful system generated points.
+    Pros: Manual choosing allows us to select logical and meaningful points in
+    the development flow at which to preserve the history. This will make the
+    history easier to follow and understand and will also reduce the computing
+    resources required by saves made at less useful system generated points.
 
-Cons: Manual saving requires a certain amount of self-discipline from programmers to remember to select and create useful commits.
-Also manual commits may not include data lost though external work interruptions or system failures and network/power outages etc. that auto-saves might handle better.
+    Cons: Manual saving requires a certain amount of self-discipline from
+    programmers to remember to select and create useful commits. Also manual
+    commits may not include data lost though external work interruptions or 
+    system failures and network/power outages etc. that auto-saves might handle
+    better.
 
 Why do you think some version control systems, like Git, allow saving multiple
 files in one commit, while others, like Google Docs, treat each file separately?
 
-I think that this is probably due to the different uses the two alternatives are designed for.
-Git is intended for use in programming/web-pages etc. and applications which involve many inter-related files that need to work together to produce a whole.
-In this case a commit becomes a "snapshot" of a whole system at a particular point.
-In the other versioning systems such as Google Docs etc., the focus is on individual files and documents with less clear interdependence.
-In this case multi-file saving simply introduces an additional layer of complexity that does not mean much and may confuse users.
+    I think that this is probably due to the different uses the two alternatives
+    are designed for. Git is intended for use in programming/web-pages etc. and 
+    applications which involve many inter-related files that need to work together
+    to produce a whole. In this case a commit becomes a "snapshot" of a whole
+    system at a particular point. In the other versioning systems such as Google
+    Docs etc., the focus is on individual files and documents with less clear
+    interdependence. In this case multi-file saving simply introduces an additional
+    layer of complexity that does not mean much and may confuse users.
 
 How can you use the commands git log and git diff to view the history of files?
 
-To use git log, it seems we must move into the top level directory of the repository first.
-Presumably this is related to the presence of a hidden .git directory. On execution, a list of commits is presented in reverse chronological order i.e. newest change first.
-This seemed counter intuitive at first but I think it is mainly done to allow "change to" and "change from" commit IDs to wrap around the commit description which does feel kind of logical.
-In chronological order the commit ID would have to come after the description to achieve this which would likely be confusing.
-I'm guessing that there is probably an option to change this somewhere in git.
-Armed with the git log, and the descriptive messages it contains, before and after IDs can be selected that "wrap around" the changes that we wish to examine. 
-Placing the ID lower in the log (i.e. the older one) first. This is important to remember to get a result that would otherwise reflect how to undo a change. I'm sure this will become something important as we get deeper into the course.
+    To use git log, it seems we must move into the top level directory of the 
+    repository first. Presumably this is related to the presence of a hidden 
+    .git directory. On execution, a list of commits is presented in reverse 
+    chronological order i.e. newest change first. This seemed counter intuitive
+    at first but I think it is mainly done to allow "change to" and "change from"
+    commit IDs to wrap around the commit description which does feel kind of logical.
+    In chronological order the commit ID would have to come after the description
+    to achieve this which would likely be confusing. I'm guessing that there is
+    probably an option to change this somewhere in git. Armed with the git log,
+    and the descriptive messages it contains, before and after IDs can be selected
+    that "wrap around" the changes that we wish to examine. Placing the ID lower
+    in the log (i.e. the older one) first. This is important to remember to get
+    a result that would otherwise reflect how to undo a change. I'm sure this
+    will become something important as we get deeper into the course.
 
 How might using version control make you more confident to make changes that
 could break something?
 
-I touched on this in a previous reflection, knowing that we can easily get back to a known working state with easy might allow us to be more experimental in code changes, maybe try radical things just to see what happens.
-No need to keep a mental log of how to get back to where we were if things don't work out because we know that git is taking care of that.
-This point is particularly important if a change is spread across many files or work-flow gets interrupted and remembering exactly what we've changed becomes more difficult.
-Though it is not yet clear to me how to manage it, I'm hoping that this will work in a recursive way too.. versions within versions with perhaps several alternative paths allowing changes within changes to be organized and reverted or implemented as necessary.
+    I touched on this in a previous reflection, knowing that we can easily get back
+    to a known working state with easy might allow us to be more experimental in code
+    changes, maybe try radical things just to see what happens. No need to keep a
+    mental log of how to get back to where we were if things don't work out 
+    because we know that git is taking care of that. This point is particularly
+    important if a change is spread across many files or work-flow gets interrupted
+    and remembering exactly what we've changed becomes more difficult. Though it is
+    not yet clear to me how to manage it, I'm hoping that this will work in a 
+    recursive way too.. versions within versions with perhaps several alternative 
+    paths allowing changes within changes to be organized and reverted or implemented
+    as necessary.
 
 Now that you have your workspace set up, what do you want to try using Git for?
 
-I've seen so many cool projects hosted on github over the years, without ever before having an idea how to use them properly. I feel like a new door is opening and plenty of new things to explore on github.
-
-
-
-
-
-
-
+    I've seen so many cool projects hosted on github over the years, without ever 
+    before having an idea how to use them properly. I feel like a new door is opening
+    and plenty of new things to explore on github.
