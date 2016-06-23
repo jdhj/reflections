@@ -42,7 +42,13 @@ use one instead of another?
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    Fill in your answer here
+    The local copy of the origin/master as at the point when the local
+    repository was last updated from the remote gives a point of reference to
+    all new commits so we can see clearly what changes we have made in total
+    that are not yet on the remote. In addition, this reference point allows us
+    to see changes that have been made remotely by others that now need to be
+    incorporated into our work, hopefully automatically merged, or if not,
+    conflicts resolved manually.
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
