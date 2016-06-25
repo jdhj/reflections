@@ -69,4 +69,10 @@ and what would be harder?
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
-    Fill in your answer here
+    I think the benefits of branch changes are mainly realized when many people
+    are working collaboratively on a project. Particularly if there are teams
+    working on different amendments. The constantly changing codebase of a
+    shared master is bound to cause problems. I'm sure it would be better to get
+    everything working and tested in a separate branch before resolving any
+    merge issues all at once with finished code, rather than doing this multiple
+    times as development progresses.
